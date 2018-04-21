@@ -74,11 +74,10 @@ bool Nr_Natural_Mare::checkBiggerNumber(Nr_Natural_Mare a,Nr_Natural_Mare b)
 {
     int i;
     for(i=1;i<=a.nr_cif;i++)
-        if(a.V.Get_a()[i]>=b.V.Get_a()[i])
+        if(a.V.Get_a()[i]>b.V.Get_a()[i])
             return 1; // se poate realiza scaderea in mod normal
         else if(a.V.Get_a()[i]<b.V.Get_a()[i])
             return 0; // se face scaderea invers
-    return 1;
 }
 
 Nr_Natural_Mare& Nr_Natural_Mare::operator+(const Nr_Natural_Mare& rhs)
